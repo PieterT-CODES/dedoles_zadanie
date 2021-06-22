@@ -90,8 +90,27 @@
                                 <field name="work_phone" widget="phone"/>
                                 <field name="work_email" widget="email"/>
                                 <field name="company_id" groups="base.group_multi_company"/>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                 <!-- ****************************PieterT-CODES******************************************** -->
                                 <field name='i_love_ddls' />
                                 <field name="employee_contacts" attrs="{'invisible':[('i_love_ddls', '!=', True)]}"/>
+                                 <!-- ****************************************************************************************** -->
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
                             </group>
                             <group>
                                 <field name="department_id"/>                          
@@ -134,9 +153,17 @@
                                                 'default_type': 'private',
                                                 'form_view_ref': 'base.res_partner_view_form_private'}"
                                             options='{"always_reload": True, "highlight_first_line": True}'/>
+                                        
+                                 <!-- ******************************PieterT-CODES************************************************************ -->
+                                        
                                         <field name="salary" on_change="count_values(self)"/>
                                         <field name="tax"/>
                                         <field name="total_salary"/>  
+                                 <!-- ****************************************************************************************** -->
+                                        
+                                        
+                                        
+                                        
                                         <field name="private_email" string="Email"/>
                                         <field name="phone" class="o_force_ltr" groups="hr.group_hr_user" string="Phone" readonly="True"/>
                                         <field name="bank_account_id" context="{'default_partner_id': address_home_id}"/>
